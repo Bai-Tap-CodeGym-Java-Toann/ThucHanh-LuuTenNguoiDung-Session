@@ -26,10 +26,10 @@
     <form class="form-group" method="post" th:object="${user}" name="user">
         <h2>Login</h2>
         <br>
-        <input class="form-control" type="text" th:field="*{username}" placeholder="username" th:value="${usern}">
+        <input class="form-control" type="text" th:field="*{username}" th:placeholder="${usern}">
         <h6 style="color: red" th:if="${#fields.hasErrors('username')}" th:errors="*{username}"></h6>
 
-        <input class="form-control" type="text" th:field="*{password}" placeholder="password" th:value="${userp}">
+        <input class="form-control" type="password" th:field="*{password}" th:placeholder="${userp}">
         <h6 style="color: red" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></h6>
         <h6 style="color: red" th:if="${log}" th:text="${log}"></h6>
         <input type="submit" class="btn btn-primary" value="Login">
